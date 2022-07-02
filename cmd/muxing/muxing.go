@@ -44,7 +44,7 @@ func postHeaders(w http.ResponseWriter, r *http.Request) {
 			sum += tmp
 		}
 	}
-	w.Header().Set("a+b", strconv.Itoa(sum))
+	w.Header().Add("a+b", strconv.Itoa(sum))
 	w.WriteHeader(http.StatusOK)
 
 }
