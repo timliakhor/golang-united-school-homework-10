@@ -33,7 +33,7 @@ func getBad(w http.ResponseWriter, r *http.Request) {
 func postData(w http.ResponseWriter, r *http.Request) {
 	d, _ := io.ReadAll(r.Body)
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("I got message\n" + string(d)))
+	w.Write([]byte("I got message:\n" + string(d)))
 }
 
 func postHeaders(w http.ResponseWriter, r *http.Request) {
